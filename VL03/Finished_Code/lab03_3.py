@@ -1,6 +1,6 @@
-"""13.1.1: Lab training: Unit tests to evaluate your program"""
+"""13.1.1: Lab training: Unit tests to evaluate your program."""
 
-# 'MAIN.py:'
+
 def main():
     """Converts from the metric to standard."""
     kilos = float(input())
@@ -10,7 +10,7 @@ def main():
 
 def kilo_to_pounds(kilos):
     """This statement intentionally has an error."""
-    return (kilos * 2.204)
+    return float(kilos * 2.204)
 
 
 if __name__ == '__main__':
