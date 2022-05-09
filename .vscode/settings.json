@@ -1,6 +1,8 @@
 {
     "cSpell.words": [
-        "nbformat"
+        "nbformat",
+        "splt",
+        "strp"
     ],
     "python.linting.enabled": true,
     "python.linting.banditEnabled": false,

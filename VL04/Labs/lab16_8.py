@@ -3,7 +3,10 @@
 cost1 = []
 def service_1(service1):
     """Car service number 1."""
-    service_cost_1 = {'oil_change': int(35), 'tire_rotation': int(19), 'car_wash': int(7), 'car_wax': int(12)}
+    service_cost_1 = {'oil_change': int(35),
+                      'tire_rotation': int(19),
+                      'car_wash': int(7),
+                      'car_wax': int(12)}
     if service1 == 'Oil change':
         cost1.append(int(35))
         print(f"Service 1: {service1}, ${service_cost_1['oil_change']}")
@@ -24,7 +27,10 @@ def service_1(service1):
 cost2 = []
 def service_2(service2):
     """Second car service."""
-    service_cost_2 = {'oil_change': int(35), 'tire_rotation': int(19), 'car_wash': int(7), 'car_wax': int(12)}
+    service_cost_2 = {'oil_change': int(35),
+                      'tire_rotation': int(19),
+                      'car_wash': int(7),
+                      'car_wax': int(12)}
     if service2 == 'Oil change':
         cost2.append(int(35))
         print(f"Service 2: {service2}, ${service_cost_2['oil_change']}")
