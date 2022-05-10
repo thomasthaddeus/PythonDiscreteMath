@@ -13,19 +13,20 @@ the output is:
 I.E.E.E.
 
 Hint: Use isupper() to check if a letter is upper case.'''
-
 # 18.6.1: LAB: Acronyms
-def acronyms(acronym):
+
+def acronyms(my_str):
     """Return the acronym of a word."""
-    acronym = input()
-    for i in acronym:
-        if i in acronym.isupper():
-            continue
-        if i in acronym.capitalize == acronym:
-            x = acronym.split([0])
-        
+    my_str = input().split()
+    acronym1 = ""
+    for char in my_str:
+        if char.islower():
+            my_str.remove(char)
+        elif char.isupper():
+            my_str.upper(char)
 
+    acronym1 = '.'.join(char[0] for char in my_str) + '.'
+    print(acronym1)
 
-
-engineer = "Institute of Electrical and Electronics Engineers"
-acronyms(engineer)
+input_str = 'Institute of Electrical and Electronics Engineers'
+acronyms(input_str)

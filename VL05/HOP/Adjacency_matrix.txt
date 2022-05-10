@@ -1,0 +1,15 @@
+keys=sorted(g.keys())
+size=len(keys)
+
+M = [ [0]*size for i in range(size) ]
+
+for a,b in [(keys.index(a), keys.index(b)) for a, row in g.items() for b in row]:
+     M[a][b] = 2 if (a==b) else 1
+
+M
+
+[2, 1, 1, 0, 0],
+[1, 0, 1, 0, 1],
+[1, 1, 0, 1, 0],
+[0, 0, 1, 0, 1],
+[0, 1, 0, 1, 0]]

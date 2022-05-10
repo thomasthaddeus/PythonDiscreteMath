@@ -3,7 +3,8 @@ def add_grade(student_grades):
     name, grade = input(grade_prompt).split()
     student_grades[name] = grade
 
-# FIXME: Create delete_name function
+def delete_name(): 
+    print
 
 # FIXME: Create print_grades function
 

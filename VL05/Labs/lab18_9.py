@@ -6,7 +6,6 @@ Ex:----------------------------------------
     Number of Novels Authored
     You entered: Number of Novels Authored
 
-
 (2) Prompt the user for the headers of two columns of a table.
     Output the column headers. (1 pt)
 Ex:----------------------------------------
@@ -17,7 +16,6 @@ Ex:----------------------------------------
     Enter the column 2 header:
     Number of novels
     You entered: Number of novels
-
 
 (3) Prompt the user for data points.
     Data points must be in this format: string, int.
@@ -32,7 +30,6 @@ Ex:-----------------------------------------
     Jane Austen, 6
     Data string: Jane Austen
     Data integer: 6
-
 
 (4) Perform error checking for the data point entries.
     If any of the following errors occurs,
@@ -61,7 +58,6 @@ Ex:------------------------------------------
     Data string: Ernest Hemingway
     Data integer: 9
 
-
 (5) Output the information in a formatted table.
     The title is right justified with a minimum field width value of 33.
     Column 1 has a minimum field width value of 20.
@@ -83,7 +79,6 @@ Ex:------------------------------------------
     Stephen King        |                     54
     Oscar Wilde         |                      1
 
-
 (6) Output the information as a formatted histogram.
     Each name is right justified with a minimum field width value of 20. (4 pts)
 Ex:------------------------------------------
@@ -101,3 +96,16 @@ Ex:------------------------------------------
          Oscar Wilde *
 '''
 # 18.9.1: LAB*: Program: Data visualization
+import re
+
+# Part 1
+data = input('Enter a title for the data:\n')
+after_colon = re.split('[-:]', data)
+print(f'You entered: {after_colon}\n')
+
+# Part 2
+col1_head = input("Enter the column 1 header:\n")
+col1 = re.split('[-:]', col1_head)
+print(col1,"\n")
+col_head2 = input("Enter the column 2 header:\n")
+col2 = re.split('[-:]', col1_head)
