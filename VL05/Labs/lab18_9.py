@@ -37,6 +37,7 @@ def data_points():
 data_points()
 
 def histogram():
+    """Print the histogram."""
     print(f"\n        {title}")
     print(f"{col1}".ljust(20) + '|' + f"{col2}".rjust(23))
     print('-' * 44)
