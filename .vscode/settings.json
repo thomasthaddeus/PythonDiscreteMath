@@ -12,5 +12,17 @@
     "python.linting.pycodestyleEnabled": false,
     "python.linting.prospectorEnabled": false,
     "python.linting.pydocstyleEnabled": false,
-    "python.linting.pylamaEnabled": false
+    "python.linting.pylamaEnabled": false,
+    "cSpell.ignoreWords": [
+        "RRGBBRYBGY",
+        "RRGBRYYBGY"
+    ],
+    "cSpell.customDictionaries": {
+        "custom-dictionary-workspace": {
+            "name": "custom-dictionary-workspace",
+            "path": "${workspaceFolder:CS351}/.cspell/custom-dictionary-workspace.txt",
+            "addWords": true,
+            "scope": "workspace"
+        }
+    }
 }
