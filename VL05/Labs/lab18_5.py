@@ -15,6 +15,8 @@ Hint: Start by removing spaces.
 Then check if a string is equivalent to its reverse."""
 
 import re
+
+
 def palindrome(text):
     """Takes in a word and returns whether or not it is a palindrome"""
     pal = "".join(re.findall(r'[a-z]+', text.lower()))
@@ -24,5 +26,6 @@ def palindrome(text):
         print(f'{text} is a palindrome')
     else:
         print(f'{text} is not a palindrome')
+
 
 palindrome(input())
