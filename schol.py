@@ -4,8 +4,9 @@ class Tuition():
 
 
     def main():
-        """Return the tuition for the year borken down by quarter."""
+        """Return the tuition for the year broken down by quarter."""
         quarter()
+        print()
 
 
     def quarter(x, y, z):

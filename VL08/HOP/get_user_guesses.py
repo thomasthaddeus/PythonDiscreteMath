@@ -14,10 +14,7 @@ user_guesses: [9, 5, 2] '''
 
 num_guesses = int(input())
 user_guesses = []
-for i in num_guesses:
-    user_guesses.append(num_guesses)
+for i in range(num_guesses):
+    user_guesses.append(int(input()))
 
-user_guesses.pop()[0] = len(user_guesses)
-
-
-print('user_guesses:', user_guesses)
+print('User guesses: ',user_guesses)
