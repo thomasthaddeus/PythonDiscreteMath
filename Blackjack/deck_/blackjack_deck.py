@@ -4,21 +4,13 @@ import random
 
 class Card:
     """Defines the individual cards_per_deck."""
-    def __init__(self, value, suit, card_value):
+    def __init__(self, value, suit):
         self.value = value
         self.suit = suit
-        self.card_value = card_value
 
     def show(self):
         """Prints the individual cards_per_deck."""
-        (f"The {self.value} of {self.suit}'s")
-
-    def card_counter(self, card_value):
-        """Returns the value of the card in Blackjack."""
-        card_values = {'Ace-Lo': 1, 'Deuce': 2, 'Three': 3, 'Four': 4, 'Five': 5,
-                       'Six': 6, 'Seven': 7, 'Eight': 8, 'Nine': 9, 'Ten': 10,
-                       'Jack': 10, 'Queen': 10, 'King': 10, 'Ace-High': 11}
-        
+        print(f"The {self.value} of {self.suit}'s")
 
 class Deck:
     """Blackjack deck object."""
@@ -47,12 +39,6 @@ class Deck:
         """Draws the card from cards list."""
         return self.cards.pop()
 
-    def draw(self, deck):
-        """Adds the card to the hand."""
-        self.hand.append(deck.draw_card())
-        return Player.self.hand
-
-
 
 class Player:
     """A player class"""
@@ -69,4 +55,3 @@ class Player:
         """Prints the players hand."""
         for card in self.hand:
             card.show()
-
