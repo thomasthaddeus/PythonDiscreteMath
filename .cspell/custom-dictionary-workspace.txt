@@ -1,4 +1,11 @@
 # Custom Dictionary Words
+alist
+encryptor
+hexlify
+inorder
 kaylajones
 kaylasimms
+OAEP
+PKCS
+publickey
 replaceme
