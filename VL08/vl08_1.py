@@ -8,4 +8,4 @@ the output is:
 For coding simplicity, follow every output value by a space. Do not end with newline."""
 list_in = input().split()
 list_out = sorted([int(i) for i in list_in if int(i) >= 0])
-print(' '.join(str(j) for j in list_out), end = ' ')
+print(' '.join(str(j) for j in list_out), end=' ')

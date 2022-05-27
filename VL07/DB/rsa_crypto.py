@@ -15,8 +15,8 @@ print(f"Private key: (n={hex(pubKey.n)}, d={hex(keyPair.d)})")
 privKeyPEM = keyPair.exportKey()
 print(privKeyPEM.decode('ascii'))
 
-#encryption
-MSG = 'A message for encryption'
+# encryption
+message = 'A message for encryption'
 encryptor = PKCS1_OAEP.new(pubKey)
-encrypted = encryptor.encrypt(MSG)
-print("Encrypted:", binascii.hexlify(encrypted))
+encrypted = encryptor.encrypt(message)
+print("Encrypted: ", binascii.hexlify(encrypted))
