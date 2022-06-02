@@ -1,114 +1,46 @@
-"""30.12 LAB*: Program: Soccer team roster (Dictionaries)
+"""30.12 LAB*: Program: Soccer team roster (Dictionaries)"""
 
-This program will store roster and rating information for a soccer team.
-Coaches rate players during tryouts to ensure a balanced team.
+num_pair = {}
+for i in range(5):
+    num = int(input(f"Enter player {i + 1}'s jersey number:\n"))
+    num_pair[num] = int(input(f"Enter player {i + 1}'s rating:\n"))
+    print("")
 
-TODO:(1) Prompt the user to input five pairs of numbers:
-    A player's jersey number (0 - 99) and the player's rating (1 - 9).
-    Store the jersey numbers and the ratings in a dictionary.
-    Output the dictionary's elements with the jersey numbers in ascending order
-    (i.e., output the roster from smallest to largest jersey number).
-    Hint: Dictionary keys can be stored in a sorted list. (3 pts)
+num_list = list(num_pair.keys())
+num_list.sort()
+print('ROSTER')
+for i in num_list:
+    print(f"Jersey number: {i}, Rating: {num_pair[i]}")
 
-Ex:
-    Enter player 1's jersey number:
-    84
-    Enter player 1's rating:
-    7
-    Enter player 2's jersey number:
-    23
-    Enter player 2's rating:
-    4
-    Enter player 3's jersey number:
-    4
-    Enter player 3's rating:
-    5
-    Enter player 4's jersey number:
-    30
-    Enter player 4's rating:
-    2
-    Enter player 5's jersey number:
-    66
-    Enter player 5's rating:
-    9
-
-ROSTER
-Jersey number: 4, Rating: 5
-Jersey number: 23, Rating: 4
-Jersey number 30, Rating: 2
-"""
-
-def usr_prompt():
-    """Prompt the user"""
-    num_pair = {}
-    for i in range(5):
-        input(f"Enter player {i}'s jersey number")
-        input(f"Enter player {i}'s rating")
-
-"""
-TODO:(2) Implement a menu of options for a user to modify the roster.
-    Each option is represented by a single character.
-    The program initially outputs the menu, and outputs the menu after a user chooses an option.
-    The program ends when the user chooses the option to Quit.
-    For this step, the other options do nothing. (2 pts)
-
-Ex:
-MENU
-a - Add player
-d - Remove player
-u - Update player rating
-r - Output players above a rating
-o - Output roster
-q - Quit
-
-Choose an option:
-"""
-
-"""
-TODO:(3) Implement the "Output roster" menu option. (1 pt)
-Ex: ROSTER
-    Jersey number: 4, Rating: 5
-    Jersey number: 23, Rating: 4
-    Jersey number 30, Rating: 2
-"""
-
-"""
-TODO:(4) Implement the "Add player" menu option.
-    Prompt the user for a new player's jersey number and rating.
-    Append the values to the two vectors. (1 pt)
-Ex: Enter a new player's jersey number:
-    49
-    Enter the player's rating:
-    8
-"""
-
-"""
-TODO:(5) Implement the "Delete player" menu option.
-    Prompt the user for a player's jersey number.
-    Remove the player from the roster (delete the jersey number and rating). (1 pt)
-Ex: Enter a jersey number:
-    4
-"""
-
-"""
-TODO:(6) Implement the "Update player rating" menu option.
-    Prompt the user for a player's jersey number.
-    Prompt again for a new rating for the player, and then change that player's rating. (1 pt)
-Ex: Enter a jersey number:
-    23
-    Enter a new rating for player:
-    6
-"""
-
-"""
-TODO:(7) Implement the "Output players above a rating" menu option.
-    Prompt the user for a rating.
-    Print the jersey number and rating for all players
-        with ratings above the entered value. (2 pts)
-Ex: Enter a rating:
-    5
-
-ABOVE 5
-Jersey number: 66, Rating: 9
-Jersey number: 84, Rating: 7
-"""
+while True:
+    print("\nMENU\na - Add player\nd - Remove player\nu - Update player rating")
+    print("r - Output players above a rating\no - Output roster\nq - Quit\n")
+    print("Choose an option:")
+    usr_input = input()
+    if usr_input == "o":
+        print('ROSTER')
+        for i in sorted(num_pair):
+            print(f"Jersey number: {i}, Rating: {num_pair[i]}")
+    elif usr_input == "a":
+        jersey_a = int(input("Enter a new player's jersey number:\n"))
+        rating = int(input("Enter the player's rating:\n"))
+        num_pair[jersey_a] = rating
+    elif usr_input == "d":
+        jersey_d = int(input("Enter a jersey number:\n"))
+        # new_dict = {key: val for key, val in num_pair.items() if key != jersey_d}
+        del num_pair[jersey_d]
+    elif usr_input == "u":
+        jersey = int(input("Enter a jersey number:\n"))
+        rating = int(input("Enter a new rating for player:\n"))
+        num_pair[jersey] = rating
+    elif usr_input == "r":
+        print("Enter a rating:")
+        rating = int(input())
+        print(f"\n\nABOVE {rating}")
+        COUNT = 0
+        for i in sorted(num_pair):
+            if num_pair[i] > rating:
+                print(f"Jersey number: {i}, Rating: {num_pair[i]}")
+                COUNT += 1
+    elif usr_input == "q":
+        exit()

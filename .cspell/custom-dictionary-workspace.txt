@@ -1,6 +1,8 @@
 # Custom Dictionary Words
 alist
 encryptor
+gradebook
+Gradebook
 hexlify
 inorder
 kaylajones

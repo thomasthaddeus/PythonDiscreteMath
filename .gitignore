@@ -123,3 +123,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 schol.py
+VL08/soccer_test.py
+VL08/soccer_roster.ipynb
+VL08/vl08_6_2.py
+VL09/user_ids.ipynb
+VL09/quicksort.py
