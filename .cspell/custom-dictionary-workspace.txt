@@ -1,15 +1,23 @@
 # Custom Dictionary Words
 alist
+autopep
 encryptor
+Gimly
 gradebook
 Gradebook
 hexlify
 inorder
 kaylajones
 kaylasimms
+mypy
 OAEP
 openpyxl
 PKCS
 publickey
+pycodestyle
+pydocstyle
+pylance
+pylint
 pyxl
 replaceme
+yapf
