@@ -27,7 +27,6 @@ while True:
         num_pair[jersey_a] = rating
     elif usr_input == "d":
         jersey_d = int(input("Enter a jersey number:\n"))
-        # new_dict = {key: val for key, val in num_pair.items() if key != jersey_d}
         del num_pair[jersey_d]
     elif usr_input == "u":
         jersey = int(input("Enter a jersey number:\n"))

@@ -2,18 +2,21 @@
 class Tuition():
     """Tuition _summary_"""
 
+    def __init__(self):
+        self.cost =
+
 
     def main():
         """Return the tuition for the year broken down by quarter."""
-        quarter()
-        print()
+        print(quarter())
+        
 
 
-    def quarter(x, y, z):
+    def quarter(self, x, y, z):
         """Return the cost of tuition"""
-        x = 2534.00
-        y = 2475.00
-        z = 2550.00
+        self.x = 2534.00
+        self.y = 2475.00
+        self.z = 2550.00
         sub_tot = x + y + z
         print(f"{'-' * 34} Quarter initial cost: {sub_tot:.2f}")
         interest = sub_tot * float(0.25)

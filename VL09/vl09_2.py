@@ -40,7 +40,6 @@ def quicksort(user_ids, i, k):
         quicksort(user_ids, j + 1, k)
 
 if __name__ == "__main__":
-    # Global variable
     ids = []
     user_id = input()
     while user_id != "-1":
