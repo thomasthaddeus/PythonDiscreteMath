@@ -30,10 +30,12 @@ Daisy
 6
 '''
 # the output after the prompts is:
-'''You entered: yellow Daisy 6
+'''
+You entered: yellow Daisy 6
 
 First password: yellow_Daisy
-Second password: 6yellow6'''
+Second password: 6yellow6
+'''
 # %% [markdown]
 # - (3) Output the length of each password
 #      (the number of characters in the strings).
@@ -65,7 +67,7 @@ Number of characters in 6yellow6: 8
 # %% [markdown]
 # ------------------------------------------------------------
 #                             MAIN.py
-# 
+
 
 # %%
 # (1): Finish reading another word and an integer into variables. 
