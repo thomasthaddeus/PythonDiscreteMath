@@ -1,5 +1,10 @@
 """31.11.1: LAB: Sorting user IDs
 
+######################################
+#          Sorting User ID's         #
+#            June 2, 2022            #
+#           Thaddeus Thomas          #
+######################################
 Given code that reads user IDs (until -1), complete the quicksort() and partition()
 functions to sort the IDs in ascending order using the Quicksort algorithm.
 Increment the global variable num_calls in quicksort()
@@ -14,7 +19,7 @@ If the input is:        the output is:
     -1                      myron1994
 """
 
-# num_calls = 0
+# NUM_CALLS = 0
 
 def partition(user_ids, i, k):
     """Write the partitioning algorithm - pick the middle element as the
@@ -50,8 +55,8 @@ if __name__ == "__main__":
     quicksort(ids, 0, len(ids) - 1)
 
     # Print number of calls to quicksort
-    num_calls = int((2 * len(ids)) - 1)
-    print(num_calls)
+    NUM_CALLS = int((2 * len(ids)) - 1)
+    print(NUM_CALLS)
 
     # Print sorted user user_ids
     for user_id in ids:
