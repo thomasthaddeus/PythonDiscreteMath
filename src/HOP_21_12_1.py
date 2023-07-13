@@ -1,5 +1,5 @@
 colors = ['black', 'green', 'blue', 'red']
-for (position, color) in enumerate(colors):
+for position, color in enumerate(colors):
     print(position, color)
 
 
