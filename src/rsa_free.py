@@ -1,22 +1,39 @@
-"""RSA without libraries."""
+"""rsa_free.py
+_summary_
+
+_extended_summary_
+
+Returns:
+    _type_: _description_
+"""
 
 import math
-message = int(input("Enter the message to be encrypted: "))
 
-p = 11
-q = 7
-e = 3
+def encrypt(msg, p, q, e):
+    """Encrypts a message using RSA encryption algorithm.
 
-n = p*q
+    Args:
+        message (int): The message to be encrypted.
+        p (int): The first prime number.
+        q (int): The second prime number.
+        e (int): The encryption exponent.
+
+    Returns:
+        int: The encrypted message.
+    """
+
+    n = p * q
+    enc_msg = pow(msg, e, n)
+    return enc_msg
 
 
-def encrypt(me):
-    """Encrypts a message."""
-    en = math.pow(me, e)
-    c = en % n
-    print("Encrypted Message is: ", c)
-    return c
+if __name__ == '__main__':
+    message = int(input("Enter the message to be encrypted: "))
 
+    p = 11
+    q = 7
+    e = 3
 
-print("Original Message is: ", message)
-c = encrypt(message)
+    print("Original Message is:", message)
+    encrypted_message = encrypt(message, p, q, e)
+    print("Encrypted Message is:", encrypted_message)
