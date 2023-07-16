@@ -10,7 +10,7 @@ def merge(numbers, i, j, k):
     """
     merged_size = k - i + 1  # Size of merged partition
     merged_numbers = []  # Temporary list for merged numbers
-    for l in range(merged_size):
+    for _ in range(merged_size):
         merged_numbers.append(0)
 
     merge_pos = 0  # Position to insert merged number
@@ -61,15 +61,15 @@ def merge_sort(numbers, i, k):
         merge(numbers, i, j, k)
 
 
-numbers = [10, 2, 78, 4, 45, 32, 7, 11]
+num_list = [10, 2, 78, 4, 45, 32, 7, 11]
 print('UNSORTED:', end=' ')
-for num in numbers:
-    print(str(num), end=' ')
+for _ in num_list:
+    print(str(_), end=' ')
 print()
 
 #  initial call to merge_sort with index
-merge_sort(numbers, 0, len(numbers) - 1)
+merge_sort(num_list, 0, len(num_list) - 1)
 print('SORTED:', end=' ')
-for num in numbers:
-    print(str(num), end=' ')
+for _ in num_list:
+    print(str(_), end=' ')
 print()

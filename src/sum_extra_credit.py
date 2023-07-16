@@ -16,7 +16,10 @@ test_grades = list(map(int, user_input.split())) # test_grades is an integer lis
 
 
 sum_extra = 0 # Initialize 0 before your loop
-
-''' Your solution goes here '''
+for grade in test_grades:
+    if grade > 100:
+        sum_extra += (grade - 100)
+    else:
+        sum_extra += 0
 
 print('Sum extra:', sum_extra)
