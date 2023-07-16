@@ -1,4 +1,4 @@
-"""lab activity 13.9 LAB: Swapping variables. -MAIN.py
+"""Swapping variables
 
 Define a function named swap_values that takes four integers as parameters
 and swaps the first with the second, and the third with the fourth values.

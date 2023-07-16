@@ -1,4 +1,4 @@
-"""13.13 LAB: Warm up: Text analyzer & modifier
+"""text_analyzer_modifier.py
 
 (3) Extend the program by calling the get_num_of_characters() function
 and then output the returned result. (1 pt)
@@ -28,7 +28,7 @@ def main():
 def get_num_of_characters(input_str):
     """returns the number of characters in the user's string."""
     counter = 0
-    for i in input_str:
+    for _ in input_str:
         counter += 1
     print(f'\nNumber of characters: {counter}')
     return counter

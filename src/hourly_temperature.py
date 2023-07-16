@@ -21,8 +21,8 @@ Example:
 
 hourly_temperature = input().split()
 
-for i, temperature in enumerate(hourly_temperature):
-    print(temperature, end="")
+for i, temp in enumerate(hourly_temperature):
+    print(temp, end="")
     if i != len(hourly_temperature) - 1:
         print(" -> ", end="")
 

@@ -1,4 +1,4 @@
-'''29.1.1: Delete from dictionary.
+'''Delete from dictionary.
 
 Delete Prussia from country_capital.
 
@@ -18,7 +18,7 @@ for pair in entries:
     country_capital[split_pair[0]] = split_pair[1]
     # country_capital is a dictionary, Ex. { 'Germany': 'Berlin', 'France': 'Paris'
 # Your solution goes here
-del country_capital('Prussia')
+del country_capital['Prussia']
 
 
 
