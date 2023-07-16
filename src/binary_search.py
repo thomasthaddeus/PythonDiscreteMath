@@ -1,16 +1,36 @@
-def binarySearch(alist, item):
-    if len(alist) == 0:
+"""binary_search.py
+
+_summary_
+
+_extended_summary_
+"""
+
+def binary_search(mylist, item):
+    """
+    binarySearch _summary_
+
+    _extended_summary_
+
+    Args:
+        alist (_type_): _description_
+        item (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
+    if len(mylist) == 0:
         return False
     else:
-        midpoint = len(alist)//2
-        if alist[midpoint]==item:
+        midpoint = len(mylist)//2
+        if mylist[midpoint]==item:
             return True
         else:
-            if item<alist[midpoint]:
-                return binarySearch(alist[:midpoint],item)
+            if item<mylist[midpoint]:
+                return binary_search(mylist[:midpoint],item)
             else:
-                return binarySearch(alist[midpoint+1:],item)
+                return binary_search(mylist[midpoint+1:],item)
 
 testlist = [0, 1, 2, 8, 13, 17, 19, 32, 42,]
-print(binarySearch(testlist, 3))
-print(binarySearch(testlist, 13))
+
+print(binary_search(testlist, 3))
+print(binary_search(testlist, 13))

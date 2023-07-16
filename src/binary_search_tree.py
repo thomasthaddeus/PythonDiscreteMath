@@ -25,8 +25,8 @@ class Node:
         self.right = None
 
 
-def inorder(root):
-    """Perform inorder traversal of the binary search tree.
+def in_order(root):
+    """Perform in_order traversal of the binary search tree.
 
     Args:
         root: The root node of the binary search tree.
@@ -35,9 +35,9 @@ def inorder(root):
         None
     """
     if root is not None:
-        inorder(root.left)
+        in_order(root.left)
         print(str(root.key) + "->", end=" ")
-        inorder(root.right)
+        in_order(root.right)
 
 
 def insert(my_node, key):
@@ -61,7 +61,7 @@ def insert(my_node, key):
     return my_node
 
 
-def minValueNode(my_node):
+def min_value_node(my_node):
     """Find the node with the minimum value in the binary search tree.
 
     Args:
@@ -78,7 +78,7 @@ def minValueNode(my_node):
     return current
 
 
-def deleteNode(root, key):
+def delete_node(root, key):
     """Delete a node with the given key from the binary search tree.
 
     Args:
@@ -92,9 +92,9 @@ def deleteNode(root, key):
         return root
 
     if key < root.key:
-        root.left = deleteNode(root.left, key)
+        root.left = delete_node(root.left, key)
     elif key > root.key:
-        root.right = deleteNode(root.right, key)
+        root.right = delete_node(root.right, key)
     else:
         if root.left is None:
             temp = root.right
@@ -105,9 +105,9 @@ def deleteNode(root, key):
             root = None
             return temp
 
-        temp = minValueNode(root.right)
+        temp = min_value_node(root.right)
         root.key = temp.key
-        root.right = deleteNode(root.right, temp.key)
+        root.right = delete_node(root.right, temp.key)
 
     return root
 
@@ -126,9 +126,9 @@ if __name__ == "__main__":
     my_root = insert(my_root, 52)
 
     print("Inorder traversal:", end=" ")
-    inorder(my_root)
+    in_order(my_root)
 
     print("\nDelete 10")
-    my_root = deleteNode(my_root, 10)
+    my_root = delete_node(my_root, 10)
     print("Inorder traversal:", end=" ")
-    inorder(my_root)
+    in_order(my_root)
