@@ -1,5 +1,6 @@
-#32.5 Class example: Seat reservation system
-#zyDE 32.5.1: Using classes to implement an airline seat reservation system.
+# Seat reservation system
+
+Using classes to implement an airline seat reservation system.
 
 #The following example implements an airline seat reservations system using classes with instance data members #and methods. Ultimately, the use of classes should lead to programs that are easier to understand and maintain.
 
@@ -61,5 +62,3 @@ while command != 'q':
         print('Invalid command.')
 
     command = input('Enter command (p/r/q):\n')
-
-
